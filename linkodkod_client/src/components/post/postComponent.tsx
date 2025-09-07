@@ -1,7 +1,7 @@
 import Img from "./imgComponent"
 import Text from "./textComponent"
 import Time from "./date"
-import "../syles/postStyle.css"
+import "../../syles/postStyle.css"
 import Like from "./likeComponents"
 export default function Post(props:{imgSrc:string,description:string,authorName:string,amountOfLikes:number}){
     return(
