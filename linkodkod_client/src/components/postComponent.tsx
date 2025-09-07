@@ -1,7 +1,13 @@
-export default function Post(){
+import Img from "./imgComponent"
+import Text from "./textComponent"
+import Time from "./date"
+export default function Post(props:{imgSrc:string,description:string,authorName:string}){
     return(
-        <>
-        <img src="" alt="" />
-        </>
+        <div>
+            <Img imgSrc={props.imgSrc}/>
+            <Text text={props.description}/>
+            <Text text={props.authorName}/>
+            <Time/>
+        </div>
     )
 }
