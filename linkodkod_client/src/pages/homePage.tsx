@@ -1,5 +1,6 @@
 import Post from "../components/postComponent"
 import postJson from "../posts.json"
+import "../syles/homeStyle.css"
 export default function Home(){
     return(
         <>
