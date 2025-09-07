@@ -1,10 +1,10 @@
 import Post from "./postComponent"
-import postsList from "../jsonPosts"
+import postJson from "../posts.json"
 export default function Home(){
     return(
         <>
         <main>
-            {postsList.map(p=>(
+            {postJson.map(p=>(
                 <Post imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} amountOfLikes={p.amountOfLikes}/>
             ))}
         </main>
