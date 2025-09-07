@@ -6,7 +6,7 @@ const seconds: number = currentTime.getSeconds();
 export default function Time(){
     return(
         <>
-        <p>{`Current time: ${hours}:${minutes}:${seconds}`}</p>
+        <p>{`Created in: ${hours}:${minutes}:${seconds}`}</p>
         </>
     )
 }
