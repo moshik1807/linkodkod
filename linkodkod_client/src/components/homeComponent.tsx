@@ -5,7 +5,7 @@ export default function Home(){
         <>
         <main>
             {postsList.map(p=>(
-                <Post imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} />
+                <Post imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} amountOfLikes={p.amountOfLikes}/>
             ))}
         </main>
         </>
