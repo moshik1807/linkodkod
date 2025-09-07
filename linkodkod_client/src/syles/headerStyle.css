@@ -1,0 +1,9 @@
+header{
+    display: flex;
+    justify-content:space-evenly;
+    color: rgb(25, 25, 109);
+}
+header img{
+    width: 100px;
+    height: 70px;
+}

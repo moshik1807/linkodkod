@@ -1,12 +1,12 @@
 [   
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10},
-    {"imgSrc":"../public/vite.svg","description":"vite logo","authorName":"moshe","amountOfLikes":10}
+    {"imgSrc":"../public/image1.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image2.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image3.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image4.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image5.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image6.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image7.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image8.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image9.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10},
+    {"imgSrc":"../public/image1.png","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ea minima molestias, exercitationem doloremque facilis sint voluptates numquam quod porro vitae, aliquam qui ex dolorum sed totam. Sit, tenetur voluptates?","authorName":"moshe","amountOfLikes":10}
 ]
