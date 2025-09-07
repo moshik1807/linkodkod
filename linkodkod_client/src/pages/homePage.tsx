@@ -1,4 +1,4 @@
-import Post from "./postComponent"
+import Post from "../components/postComponent"
 import postJson from "../posts.json"
 export default function Home(){
     return(
