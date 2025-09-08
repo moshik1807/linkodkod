@@ -1,19 +1,13 @@
-div{   
+.post{
     background-color: rgb(231, 237, 244);
     border-radius: 15px;
     margin: 15px;
     padding: 15px;
+    width: 450px;
 }
-div img{
+.post img{
     width: 100%;
     height: 50%;
     object-fit: cover;
     border-radius: 15px;
 }
-div button{
-    background-color:rgb(234, 246, 242);
-    border-radius: 10px;
-    width: 60px;
-    height: 40px;
-}
-
