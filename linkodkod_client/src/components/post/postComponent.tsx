@@ -1,14 +1,18 @@
 import Time from "./date"
 import "../../syles/postStyle/PostStyle.css"
 import Like from "./likeComponents"
-export default function Post(props:{imgSrc:string,description:string,authorName:string,amountOfLikes:number}){
+import { useNavigate } from "react-router";
+
+export default function Post(props:{imgSrc:string,description:string,authorName:string,amountOfLikes:number,id:number}){
+    const navigate = useNavigate();
     return(
-        <div className="post">
+        <button id={props.id.toString()} onClick={()=>{navigate('postPage')}}>
+            <div className="post">
             <img src={props.imgSrc} alt="" />
             <p>{props.description}</p>
             <p>{props.authorName}</p>
             <Time/>
             <Like AmountOfLikes={props.amountOfLikes}/>
-        </div>
+        </div></button>
     )
 }
