@@ -13,24 +13,37 @@ export default function Home(){
     };
 
     const[posts,setPosts]=useState<Post[]>([]);
-
-
+    const[err,seterr]=useState("")
+    
     useEffect(() => {
         fetch("http://localhost:3000/getAll")
             .then((res)=> res.json())
             .then((data)=> setPosts(JSON.parse(data)))
-            .catch((err)=> console.log("Error fetching riddles:", err))
+            .catch((err)=> seterr((err)))
     }, []);
     console.log(posts)
+    console.log(Object.keys(err))
 
+    if(err){
+        return(
+            <>
+            <Layout>
+            <main>
+                {/* לטפל בהודעת שגיאה מדוייקת */}
+                <p>{err.name}</p>
+            </main>
+            </Layout>
+            </>
+        )
+    }
 
     return(
         <>
         <Layout>
         <main>
-            {posts.map(p=>(
+            {posts.length?posts.map(p=>(
                 <Post imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} amountOfLikes={p.amountOfLikes}/>
-            ))}
+            )):<h1 className="">The page is loading....</h1>}
         </main>
         </Layout>
         </>
