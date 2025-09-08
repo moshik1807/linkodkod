@@ -1,5 +1,5 @@
 import {useState } from "react"
-
+import "../../syles/postStyle/likeStyle.css"
 export default function Like(props:{AmountOfLikes:number}){
     const[addLike,setAddLike] =  useState(true)
     const[amountOfLikes,setAmountOfLikes] = useState(props.AmountOfLikes)
@@ -7,7 +7,7 @@ export default function Like(props:{AmountOfLikes:number}){
     
     return(
         <>
-        <button onClick={()=>{
+        <button className="like" onClick={()=>{
             if(!addLike && amountOfLikes!== props.AmountOfLikes){
                 setAddLike(!addLike)
                 setAmountOfLikes(amountOfLikes - 1)

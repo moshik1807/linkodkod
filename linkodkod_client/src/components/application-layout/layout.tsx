@@ -2,7 +2,7 @@ import Logo from "./logo";
 import Slogen from "./slogen";
 import type { ReactNode } from 'react';
 import React from "react";
-import "../../syles/layoutStyle.css"
+import "../../syles/application-layoutStyle/LayoutStyle.css"
 type MainLayout = {
       children: ReactNode;
       title?: string; 

@@ -1,0 +1,6 @@
+header{
+    display: flex;
+    justify-content:space-evenly;
+    background-color: rgb(231, 237, 244);
+    border-radius: 15px;
+}
