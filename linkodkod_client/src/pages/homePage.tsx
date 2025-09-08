@@ -1,10 +1,10 @@
 import Post from "../components/post/postComponent"
-// import postJson from "../posts.json"
 import "../syles/homeStyle.css"
 import Layout from "../components/application-layout/layout"
 import { useState,useEffect } from "react"
 
 export default function Home(){
+    console.log(111)
         type Post = {
         imgSrc: string;
         description: string;

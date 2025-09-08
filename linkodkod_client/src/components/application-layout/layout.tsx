@@ -2,6 +2,7 @@ import Logo from "./logo";
 import Slogen from "./slogen";
 import type { ReactNode } from 'react';
 import React from "react";
+import Navbar from "./navbar";
 import "../../syles/application-layoutStyle/LayoutStyle.css"
 type MainLayout = {
       children: ReactNode;
@@ -14,6 +15,7 @@ const Layout: React.FC<MainLayout> = ({children}) => {
       <header>
         <Slogen/>
         <Logo/>
+        <Navbar/>
       </header>
       {children}
     </>
