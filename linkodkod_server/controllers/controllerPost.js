@@ -1,6 +1,7 @@
-import { readPosts } from "../services/postService"
+import { readPosts } from "../services/postService.js"
 
-export function getAllPosts(req,res){
-    const posts = readPosts()
+export async function getAllPosts(req,res){
+    const posts = await readPosts()
     res.json(posts)
 }
+// curl http://localhost:3000/getAll
