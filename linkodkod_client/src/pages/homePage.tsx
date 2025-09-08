@@ -10,6 +10,7 @@ export default function Home(){
         description: string;
         authorName:string;
         amountOfLikes:number
+        id:number
     };
 
     const[posts,setPosts]=useState<Post[]>([]);
@@ -42,7 +43,7 @@ export default function Home(){
         <Layout>
         <main>
             {posts.length?posts.map(p=>(
-                <Post imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} amountOfLikes={p.amountOfLikes}/>
+                <Post id={p.id} imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} amountOfLikes={p.amountOfLikes}/>
             )):<h1 className="">The page is loading....</h1>}
         </main>
         </Layout>

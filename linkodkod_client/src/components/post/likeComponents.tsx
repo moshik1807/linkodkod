@@ -7,7 +7,7 @@ export default function Like(props:{AmountOfLikes:number}){
     
     return(
         <>
-        <button className="like" onClick={()=>{
+        <button className="like" onClick={(e)=>{
             if(!addLike && amountOfLikes!== props.AmountOfLikes){
                 setAddLike(!addLike)
                 setAmountOfLikes(amountOfLikes - 1)
@@ -15,6 +15,7 @@ export default function Like(props:{AmountOfLikes:number}){
             else if(addLike){
                 setAddLike(!addLike)
                 setAmountOfLikes(amountOfLikes + 1)}
+            e.stopPropagation()
             }}>♥️{amountOfLikes}</button>
         </>
     )
