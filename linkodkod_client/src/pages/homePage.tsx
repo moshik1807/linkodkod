@@ -1,5 +1,5 @@
 import Post from "../components/post/postComponent"
-import "../syles/homeStyle.css"
+import "../syles/pagesStyle/homeStyle.css"
 import Layout from "../components/application-layout/layout"
 import { useState,useEffect } from "react"
 

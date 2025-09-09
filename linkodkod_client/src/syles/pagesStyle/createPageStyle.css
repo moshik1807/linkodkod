@@ -1,0 +1,16 @@
+.createForm{
+    display: grid;
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.input{
+    margin-top: 10%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: rgb(231, 237, 244);
+}
+.submit{
+    background-color: rgb(41, 41, 139);
+    color: white;
+}

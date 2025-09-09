@@ -1,6 +1,6 @@
 import { useLocation } from "react-router"
 import { useEffect,useState } from "react"
-import "../syles/postPageStyle.css"
+import "../syles/pagesStyle/postPageStyle.css"
 import Layout from "../components/application-layout/layout";
 export default function PostPage(){
 
