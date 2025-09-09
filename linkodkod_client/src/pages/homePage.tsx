@@ -1,6 +1,5 @@
 import Post from "../components/post/postComponent"
-import "../syles/homeStyle.css"
-import Layout from "../components/application-layout/layout"
+import "../syles/pagesStyle/homeStyle.css"
 import { useState,useEffect } from "react"
 
 export default function Home(){
@@ -9,8 +8,9 @@ export default function Home(){
         imgSrc: string;
         description: string;
         authorName:string;
-        amountOfLikes:number
-        id:number
+        amountOfLikes:number;
+        id:number;
+        createdIn:string;
     };
 
     const[posts,setPosts]=useState<Post[]>([]);
@@ -28,25 +28,21 @@ export default function Home(){
     if(err){
         return(
             <>
-            <Layout>
             <main>
                 {/* לטפל בהודעת שגיאה מדוייקת */}
                 <p>{err.name}</p>
             </main>
-            </Layout>
             </>
         )
     }
 
     return(
         <>
-        <Layout>
         <main>
             {posts.length?posts.map(p=>(
-                <Post id={p.id} imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} amountOfLikes={p.amountOfLikes}/>
+                <Post id={p.id} imgSrc={p.imgSrc} description={p.description} authorName={p.authorName} amountOfLikes={p.amountOfLikes} createdIn={p.createdIn}/>
             )):<h1 className="">The page is loading....</h1>}
         </main>
-        </Layout>
         </>
     )
 }

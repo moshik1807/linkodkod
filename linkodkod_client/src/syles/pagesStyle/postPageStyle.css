@@ -1,0 +1,12 @@
+img{
+    width: 100%;
+    border-radius: 5%;
+    margin-top: 3%;
+}
+#txt{
+    font-size: 40px;
+}
+#author{
+    color: rgb(101, 97, 97);
+    font-size: 30px;
+}
