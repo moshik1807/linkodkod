@@ -1,9 +1,8 @@
-import Time from "./date"
 import "../../syles/postStyle/PostStyle.css"
 import Like from "./likeComponents"
 import { useNavigate } from "react-router";
 
-export default function Post(props:{imgSrc:string,description:string,authorName:string,amountOfLikes:number,id:number}){
+export default function Post(props:{imgSrc:string,description:string,authorName:string,amountOfLikes:number,id:number,createdIn:string}){
     const navigate = useNavigate();
     const id = props.id.toString()
     return(
@@ -12,7 +11,7 @@ export default function Post(props:{imgSrc:string,description:string,authorName:
             <img src={props.imgSrc} alt="" />
             <p>{props.description}</p>
             <p>Author-- {props.authorName}</p>
-            <Time/>
+            <p>created on : {props.createdIn}</p>
             <Like AmountOfLikes={props.amountOfLikes}/>
         </div></button>
     )
