@@ -5,12 +5,13 @@ import { useNavigate } from "react-router";
 
 export default function Post(props:{imgSrc:string,description:string,authorName:string,amountOfLikes:number,id:number}){
     const navigate = useNavigate();
+    const id = props.id.toString()
     return(
-        <button id={props.id.toString()} onClick={()=>{navigate('postPage')}}>
+        <button id={props.id.toString()} onClick={()=>{navigate('postPage', { state: { id }})}}>
             <div className="post">
             <img src={props.imgSrc} alt="" />
             <p>{props.description}</p>
-            <p>{props.authorName}</p>
+            <p>Author-- {props.authorName}</p>
             <Time/>
             <Like AmountOfLikes={props.amountOfLikes}/>
         </div></button>
