@@ -8,6 +8,7 @@ const hours = currentTime.getHours();
 const minutes = currentTime.getMinutes();
 const seconds = currentTime.getSeconds();
 
+
 export function Time(){
     return(`${year}/${month}/${day}/${hours}:${minutes}:${seconds}`)
 }
@@ -17,7 +18,6 @@ export async function checkIfFFileExists(fileName){
     return files.includes(fileName)
 }
 
-// console.log(await checkIfFFileExists("image1.png"))
 
 
 
