@@ -1,4 +1,4 @@
-import { newUser } from "../services/usersService.js"
+import { newUser,CheckingIfUserExists } from "../services/usersService.js"
 export async function signup(req,res){
     if(req.body.name && req.body.password){
     try{
@@ -10,5 +10,17 @@ export async function signup(req,res){
     }}else{
         res.end("No suitable parameters were entered.")
     }
+}
 
+export async function login(req,res){
+    if(req.body.name && req.body.password){
+    try{
+        const result = await CheckingIfUserExists(req.body)
+        res.end(result)
+    }
+    catch(err){
+        res.end(result)
+    }}else{
+        res.end("No suitable parameters were entered.")
+    }
 }

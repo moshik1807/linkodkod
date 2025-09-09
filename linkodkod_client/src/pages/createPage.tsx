@@ -22,7 +22,7 @@ export default function Create(){
                     post[key] = value;  
                 });
             
-            fetch('http://localhost:3000/create', {
+            fetch('http://localhost:3000/posts/create', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json',},
                 body: JSON.stringify(post)

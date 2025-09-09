@@ -8,8 +8,12 @@ export async function newUser(user) {
         user.password = await bcrypt.hash(user.password, 10)
         data.push(user)
         const newData = JSON.stringify(data)
-        await fs.writeFile("./posts.json", newData, 'utf-8',null,2)
+        await fs.writeFile("./users.json", newData, 'utf-8',null,2)
     }catch(err){
         console.log(err)
     }
+}
+
+export async function CheckingIfUserExists(user) {
+    
 }
