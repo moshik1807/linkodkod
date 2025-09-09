@@ -9,6 +9,10 @@ export default function Navbar(){
         <button onClick={()=>{
             navigate("/")
         }}>Home</button>
+
+        <button onClick={()=>{
+            navigate("/create")
+        }}>➕</button>
         </div>
     )
 }
