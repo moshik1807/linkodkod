@@ -1,5 +1,4 @@
 import * as fs from "fs/promises"
-// import Time from "./helpService.js";
 import { checkIfFFileExists ,Time} from "./helpService.js";
 export async function readPosts(){
     try {
