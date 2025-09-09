@@ -1,5 +1,6 @@
 import { useLocation } from "react-router"
 import { useEffect,useState } from "react"
+import "../syles/postPageStyle.css"
 import Layout from "../components/application-layout/layout";
 export default function PostPage(){
 
@@ -29,8 +30,8 @@ export default function PostPage(){
         <>
         <Layout>
             <img src={post.imgSrc} alt="" />
-            <p>{post.description}</p>
-            <p>{post.authorName}</p>
+            <p id="txt">{post.description}</p>
+            <p id="author">author:  {post.authorName}</p>
         </Layout>
         </>
     )

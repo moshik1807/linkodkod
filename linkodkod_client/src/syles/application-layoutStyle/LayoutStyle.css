@@ -5,3 +5,9 @@ header{
     background-color: rgb(231, 237, 244);
     border-radius: 15px;
 }
+@media (max-width: 767px)  {
+    header{
+        height: 90px;
+    }
+
+}
