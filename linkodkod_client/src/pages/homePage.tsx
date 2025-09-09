@@ -17,7 +17,7 @@ export default function Home(){
     const[err,seterr]=useState("")
     
     useEffect(() => {
-        fetch("http://localhost:3000/getAll")
+        fetch("http://localhost:3000/posts/getAll")
             .then((res)=> res.json())
             .then((data)=> setPosts(JSON.parse(data)))
             .catch((err)=> seterr((err)))

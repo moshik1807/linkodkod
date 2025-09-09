@@ -10,7 +10,7 @@ export default function PostPage(){
     const[err,seterr]=useState("")
 
     useEffect(() => {
-        fetch(`http://localhost:3000/getById/${id}`)
+        fetch(`http://localhost:3000/posts/getById/${id}`)
             .then((res)=> res.json())
             .then((data)=> setPost(data))
             .catch((err)=> seterr((err)))

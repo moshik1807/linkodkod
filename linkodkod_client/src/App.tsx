@@ -4,6 +4,7 @@ import Home from './pages/homePage';
 import PostPage from './pages/postPage';
 import Create from './pages/createPage';
 import Layout from './components/application-layout/layout';
+import SignupPage from './pages/signupPage';
 function App() {
 
   return (
@@ -11,7 +12,8 @@ function App() {
     <BrowserRouter>
     <Layout>
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
+        <Route path='/' element={<SignupPage/>}></Route>
+        {/* <Route path='/' element={<Home/>}></Route> */}
         <Route path='/postPage' element={<PostPage/>}></Route>
         <Route path='/create' element={<Create/>}></Route>
       </Routes>
