@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt'
 import { ReadUsers,WriteUsers } from '../dal/dalUsers.js'
 import { CreatToken } from './authService.js'
 
-//בדיקה ששם משתמש זה לא קיים ,הצפנת הסיסמא והכנסה לקובץ משתמשים
+//Checking that this username does not exist, encrypting the password and inserting it into the users file
 export async function newUser(newuser) {
     try{
         const data = await ReadUsers()
@@ -24,7 +24,7 @@ export async function newUser(newuser) {
 }
 
 
-// אימות שם משתמש וסיסמא בהתחברות
+// Username and password verification at login
 export async function UserVerificationInList(usertocheck) {
     const data = await ReadUsers()
     const user = data.filter((e) => e.name == usertocheck.name)

@@ -8,12 +8,12 @@ const hours = currentTime.getHours();
 const minutes = currentTime.getMinutes();
 const seconds = currentTime.getSeconds();
 
-//מחזירה את התאריך הנוכחי
+//Returns the current date
 export function Time(){
     return(`${year}/${month}/${day}/${hours}:${minutes}:${seconds}`)
 }
 
-//public בודקת ששם הקובץ שהוכנס נמצא בתיקיית הקבצים 
+//public checks that the inserted file name is in the files folder
 export async function checkIfFFileExists(fileName){
     const files = await readdir('./public')
     return files.includes(fileName)

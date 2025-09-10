@@ -1,6 +1,6 @@
 import { newUser,UserVerificationInList } from "../services/usersService.js"
 
-//פונקציית הרשמה שמכניסה פרטים לקובץ ומחזירה לשרת טוקן
+//A registration function that inserts details into a file and returns a token to the server.
 export async function signup(req,res){
     if(req.body.name && req.body.password){
     try{
@@ -14,7 +14,7 @@ export async function signup(req,res){
     }
 }
 
-//פונקציית התחברות למשתמש קיים שמאמתת נתונים ומחזירה טוקן
+//A login function for an existing user that validates data and returns a token
 export async function login(req,res){
     if(req.body.name && req.body.password){
     try{

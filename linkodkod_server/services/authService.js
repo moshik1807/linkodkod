@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 
-//יצירת טוקן
+//Token creation
 export function CreatToken(user){
     const token = jwt.sign(
              { 
@@ -13,7 +13,7 @@ export function CreatToken(user){
     return token
 }
 
-//פונקצייה שבודקת הרשאות למשתמשים מסוימים
+//A function that checks permissions for certain users
 const auth = (roles) => (req, res, next) => {    
     try {
         const authHeader = req.headers['authorization']

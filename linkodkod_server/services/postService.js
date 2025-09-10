@@ -1,8 +1,7 @@
-// import * as fs from "fs/promises"
 import { checkIfFFileExists ,Time} from "./helpService.js";
 import { Readfile,WritePosts } from '../dal/dalPosts.js'
 
-//מחזירה את כל הפוסטים הקיימים ברשימה
+//Returns all existing posts in the list
 export async function readPosts(){
     try {
         const data = await Readfile()
@@ -13,7 +12,7 @@ export async function readPosts(){
     }
 }
 
-//מחזיר מהרשימה פוסט מסויים לפי מספר מזהה
+//Returns a specific post from the list by ID number
 export async function getPostByID(id){
     const data = await Readfile() 
       
@@ -25,7 +24,7 @@ export async function getPostByID(id){
     }
 }
 
-//הוספת פוסט חדש לרשימה
+//Add a new post to the list
 export async function newPost(post) {
     try{
         const fileExists = await checkIfFFileExists(post.imgSrc)
