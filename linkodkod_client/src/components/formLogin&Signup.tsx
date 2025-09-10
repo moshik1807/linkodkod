@@ -1,5 +1,10 @@
 import { useRef } from "react"
+import { useNavigate } from "react-router";
+
+
 export default function FormLoginAndSignup(props:{point:string}){
+    const navigate = useNavigate();
+
     const form = useRef<HTMLFormElement>(null)
     const name=useRef<HTMLInputElement>(null)
     const password=useRef<HTMLInputElement>(null)
@@ -22,7 +27,7 @@ export default function FormLoginAndSignup(props:{point:string}){
                 headers: {'Content-Type': 'application/json',},
                 body: JSON.stringify(user)
             })
-            }}>submit</button>
+            }} onClickCapture={()=>{navigate('/')}}>submit</button>
         </form>
         </>
     )
