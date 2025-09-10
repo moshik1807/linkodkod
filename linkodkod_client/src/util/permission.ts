@@ -3,6 +3,7 @@ type User = {
   password: string;
 };
 
+//שליחת בקשת פוסט להתחברות בשרת עם נתוני המשתמש
 export async function login(user: User) {
   await new Promise(resolve => setTimeout(resolve, 1000));
   try {
@@ -27,7 +28,7 @@ export async function login(user: User) {
 }
 
 
-
+//שליחת בקשת הרשמה לשרת עם פרטי המשתמש
 export async function signup(user: User) {
   await new Promise(resolve => setTimeout(resolve, 1000));
   try {
