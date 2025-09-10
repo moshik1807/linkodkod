@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
 import { ReadUsers,WriteUsers } from '../dal/dalUsers.js'
-
+import { CreatToken } from './authService.js'
 
 //בדיקה ששם משתמש זה לא קיים ,הצפנת הסיסמא והכנסה לקובץ משתמשים
 export async function newUser(newuser) {
@@ -14,6 +14,10 @@ export async function newUser(newuser) {
         data.push(newuser)
         const newData = JSON.stringify(data)
         await WriteUsers(newData)
+        const user = data.filter((e) => e.name == newuser.name)
+        const token = CreatToken(user[0])
+        console.log(token)
+        return token
     }catch(err){
         console.log(err)
     }
@@ -25,8 +29,12 @@ export async function UserVerificationInList(usertocheck) {
     const data = await ReadUsers()
     const user = data.filter((e) => e.name == usertocheck.name)
     if(user.length){
-        const isPasswordValid = await bcrypt.compare(user[0].password, usertocheck.password)
-        return isPasswordValid
+        const isPasswordValid = await bcrypt.compare(  usertocheck.password,user[0].password)
+        if(isPasswordValid){
+            const token = CreatToken(user[0])
+            return token
+        }
     }
     else{throw Error ("User does not exist.")}
 }
+

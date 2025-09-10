@@ -24,5 +24,3 @@ export async function createPost(req,res){
 }
 
 
-// curl http://localhost:3000/getAll
-// curl http://localhost:3000/getById/1
