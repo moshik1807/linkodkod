@@ -8,7 +8,6 @@ The routing for receiving all posts routes to a controller that uses a service t
 The routing for a specific post does a similar routing process but uses a different function that works with IDs.
 And the creation routing also parses the data it receives and writes it into the posts' gson file.
 
-
 Required installations:
 1 npm i bcrypt
 2 npm i cors
@@ -18,3 +17,6 @@ Required installations:
 
 Command to run the project:
 node --env-file=.env app.js
+
+Create an env file containing
+key to token
