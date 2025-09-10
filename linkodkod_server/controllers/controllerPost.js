@@ -3,7 +3,8 @@ import { getPostByID } from "../services/postService.js"
 import { newPost } from "../services/postService.js"
 export async function getAllPosts(req,res){
     const posts = await readPosts()
-    res.json(posts)
+    console.log(posts)
+    res.send(posts)
 }
 
 export async function getPostById(req,res){

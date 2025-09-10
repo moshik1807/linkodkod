@@ -1,6 +1,5 @@
 import bcrypt from 'bcrypt'
 import { ReadUsers,WriteUsers } from '../dal/dalUsers.js'
-import * as fs from "fs/promises"
 
 
 //בדיקה ששם משתמש זה לא קיים ,הצפנת הסיסמא והכנסה לקובץ משתמשים
@@ -9,7 +8,7 @@ export async function newUser(newuser) {
         const data = await ReadUsers()
         const existingUser = data.find(user=>user.name === newuser.name)
         if(existingUser){
-            return "existing user"
+            throw Error ("enter other name")
         }
         newuser.password = await bcrypt.hash(newuser.password, 10)
         data.push(newuser)
@@ -21,10 +20,13 @@ export async function newUser(newuser) {
 }
 
 
-//אימות שם משתמש וסיסמא
+// אימות שם משתמש וסיסמא בהתחברות
 export async function UserVerificationInList(usertocheck) {
     const data = await ReadUsers()
-    const isPasswordValid = await bcrypt.compare(password, check.player.password)
-    const existingUser = data.find(user=>user.name === usertocheck.name && user.password === hashedPassword)
-    return existingUser
+    const user = data.filter((e) => e.name == usertocheck.name)
+    if(user.length){
+        const isPasswordValid = await bcrypt.compare(user[0].password, usertocheck.password)
+        return isPasswordValid
+    }
+    else{throw Error ("User does not exist.")}
 }

@@ -1,1 +1,1 @@
-[]
+[{"imgSrc":"http://localhost:3000/image1.png","description":"a","authorName":"b","id":1,"createdIn":"2025/8/10/10:4:54","amountOfLikes":0},{"imgSrc":"http://localhost:3000/image1.png","description":"b","authorName":"c","id":2,"createdIn":"2025/8/10/10:4:54","amountOfLikes":0},{"imgSrc":"http://localhost:3000/image1.png","description":"rr","authorName":"moshe","id":3,"createdIn":"2025/8/10/10:26:0","amountOfLikes":0}]
