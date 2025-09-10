@@ -7,7 +7,7 @@ export default function Navbar(){
     return(
         <div className="navbar">
         <button onClick={()=>{
-            navigate("/")
+            navigate("/home")
         }}>Home</button>
 
         <button onClick={()=>{

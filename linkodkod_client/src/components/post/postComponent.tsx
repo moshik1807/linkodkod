@@ -6,13 +6,13 @@ export default function Post(props:{imgSrc:string,description:string,authorName:
     const navigate = useNavigate();
     const id = props.id.toString()
     return(
-        <button id={props.id.toString()} onClick={()=>{navigate('postPage', { state: { id }})}}>
+        <section id={props.id.toString()} onClick={()=>{navigate('/postPage', { state: { id }})}}>
             <div className="post">
             <img src={props.imgSrc} alt="" />
             <p>{props.description}</p>
             <p>Author-- {props.authorName}</p>
             <p>created on : {props.createdIn}</p>
             <Like AmountOfLikes={props.amountOfLikes}/>
-        </div></button>
+        </div></section>
     )
 }

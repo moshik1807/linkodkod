@@ -1,11 +1,19 @@
 import {useRef} from "react"
+import { loadToken } from "../util/localstorege"
+import { useNavigate } from "react-router";
+
 import "../syles/pagesStyle/createPageStyle.css"
 
 export default function Create(){
+    const navigate = useNavigate();
+
+
     const form = useRef<HTMLFormElement>(null)
     const imgSrc=useRef<HTMLInputElement>(null)
     const description=useRef<HTMLInputElement>(null)
     const authorName=useRef<HTMLInputElement>(null)
+
+    const stored = loadToken("authToken"); 
 
     return(
         <>
@@ -24,11 +32,14 @@ export default function Create(){
             
             fetch('http://localhost:3000/posts/create', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json',},
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization':'Bearer ' + stored
+                },
                 body: JSON.stringify(post)
             })
 
-            }}>submit</button>
+            }} onClickCapture={()=>{navigate('/home')}}>submit</button>
         </form>
         </>
     )

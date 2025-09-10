@@ -1,0 +1,13 @@
+#auth{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+#auth button{
+    margin-top: 3%;
+    background-color: rgb(38, 38, 140);
+    color:white;
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+}

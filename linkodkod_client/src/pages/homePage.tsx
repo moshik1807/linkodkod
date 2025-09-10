@@ -1,9 +1,13 @@
 import Post from "../components/post/postComponent"
 import "../syles/pagesStyle/homeStyle.css"
 import { useState,useEffect } from "react"
+import { loadToken } from "../util/localstorege";
 
 export default function Home(){
-    console.log(111)
+
+        const stored = loadToken("authToken"); 
+
+
         type Post = {
         imgSrc: string;
         description: string;
@@ -17,12 +21,19 @@ export default function Home(){
     const[err,seterr]=useState("")
     
     useEffect(() => {
-        fetch("http://localhost:3000/posts/getAll")
+        fetch("http://localhost:3000/posts/getAll",{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization':'Bearer ' + stored
+                }
+            })
             .then((res)=> res.json())
-            .then((data)=> setPosts(JSON.parse(data)))
+            .then((data)=> setPosts(data))
             .catch((err)=> seterr((err)))
     }, []);
     console.log(posts)
+    console.log(err)
     console.log(Object.keys(err))
 
     if(err){
