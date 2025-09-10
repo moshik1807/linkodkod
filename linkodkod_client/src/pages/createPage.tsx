@@ -1,8 +1,13 @@
 import {useRef} from "react"
 import { loadToken } from "../util/localstorege"
+import { useNavigate } from "react-router";
+
 import "../syles/pagesStyle/createPageStyle.css"
 
 export default function Create(){
+    const navigate = useNavigate();
+
+
     const form = useRef<HTMLFormElement>(null)
     const imgSrc=useRef<HTMLInputElement>(null)
     const description=useRef<HTMLInputElement>(null)
@@ -34,7 +39,7 @@ export default function Create(){
                 body: JSON.stringify(post)
             })
 
-            }}>submit</button>
+            }} onClickCapture={()=>{navigate('/home')}}>submit</button>
         </form>
         </>
     )
