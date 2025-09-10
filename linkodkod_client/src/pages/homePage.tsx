@@ -3,7 +3,6 @@ import "../syles/pagesStyle/homeStyle.css"
 import { useState,useEffect } from "react"
 
 export default function Home(){
-    console.log(111)
         type Post = {
         imgSrc: string;
         description: string;
@@ -19,10 +18,11 @@ export default function Home(){
     useEffect(() => {
         fetch("http://localhost:3000/posts/getAll")
             .then((res)=> res.json())
-            .then((data)=> setPosts(JSON.parse(data)))
+            .then((data)=> setPosts(data))
             .catch((err)=> seterr((err)))
     }, []);
     console.log(posts)
+    console.log(err)
     console.log(Object.keys(err))
 
     if(err){
