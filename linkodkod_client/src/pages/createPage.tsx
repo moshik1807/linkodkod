@@ -1,4 +1,5 @@
 import {useRef} from "react"
+import { loadToken } from "../util/localstorege"
 import "../syles/pagesStyle/createPageStyle.css"
 
 export default function Create(){
@@ -6,6 +7,8 @@ export default function Create(){
     const imgSrc=useRef<HTMLInputElement>(null)
     const description=useRef<HTMLInputElement>(null)
     const authorName=useRef<HTMLInputElement>(null)
+
+    const stored = loadToken("authToken"); 
 
     return(
         <>
@@ -24,7 +27,10 @@ export default function Create(){
             
             fetch('http://localhost:3000/posts/create', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json',},
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization':'Bearer ' + stored
+                },
                 body: JSON.stringify(post)
             })
 

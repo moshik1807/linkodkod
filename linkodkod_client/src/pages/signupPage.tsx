@@ -1,12 +1,3 @@
-// import FormLoginAndSignup from "../components/formLogin&Signup"
-// export default function SignupPage(){
-
-//     return(
-//         <>
-//             <FormLoginAndSignup point="signup"/>
-//         </>
-//     )
-// }
 import { useNavigate } from "react-router";
 import { signup } from "../util/permission";
 import { useState } from "react";
