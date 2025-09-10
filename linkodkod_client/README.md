@@ -16,3 +16,5 @@ Installations required for the project:
 
 Command to run the project:
 npm run dev
+
+Note: When creating a post with a link to an image, you must enter the name of the image from the public folder as it is written there, otherwise the post will not be uploaded.
